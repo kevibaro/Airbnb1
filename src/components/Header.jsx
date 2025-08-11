@@ -13,7 +13,7 @@ function Header() {
         <div className='flex flex-col md:flex-row items-center justify-between border-b-2 border-b-gray-400 w-full h-auto md:h-20 gap-4 md:gap-0'>
 
           <Link to='/'><div>
-            <img className='w-24 md:w-28' src={logo} alt="" />
+            <img className='w-24 md:w-44' src={logo} alt="" />
           </div></Link>
 
 

@@ -9,7 +9,6 @@ import Reserva from "./Reserva";
 
 function Description() {
   const { id } = useParams();  // ID que viene de la URL
-  const navigate = useNavigate();
   const [propiedad, setPropiedad] = useState(null);
   const [reserva, setReserva] = useState(null);
 
