@@ -3,11 +3,11 @@ import './App.css'
 import Formulario from './pages/Formulario'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Cabañas from './components/types.jsx/Cabañas'
-import Casas from './components/types.jsx/Casas'
-import Playa from './components/types.jsx/Playa'
-import Description from './components/types.jsx/Description'
-import Reserva from './components/types.jsx/Reserva'
+import Cabañas from './components/tipos/Cabañas'
+import Casas from './components/tipos/Casas'
+import Playa from './components/tipos/Playa'
+import Description from './components/tipos/Description'
+import Reserva from './components/tipos/Reserva'
 
 
 

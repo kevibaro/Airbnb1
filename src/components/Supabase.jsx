@@ -67,10 +67,10 @@ function Supabase() {
       <div className="flex justify-center flex-wrap gap-6 p-6">
         {resultadosFiltrados.length > 0 ? (
           resultadosFiltrados.map((p) => (
-            <button
+            <div
               onClick={() => handleVerDetalles(p.id)}
               key={p.id}
-              className="w-72 border rounded-2xl overflow-hidden hover:shadow-lg transition duration-300"
+              className="w-72 border rounded-2xl overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer"
             >
               <div className="card-body text-left">
                 <img
@@ -101,7 +101,8 @@ function Supabase() {
                   </button>
                 </div>
               </div>
-            </button>
+            </div>
+
           ))
         ) : (
           <p className="text-gray-500 text-center w-full">
