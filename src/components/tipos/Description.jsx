@@ -34,7 +34,6 @@ function Description() {
   return (
     <>
     <Autenticacion/>
-      <Header />
       <div className="max-w-3xl mx-auto mt-10 p-6 border rounded-xl shadow-lg">
         <img
           src={propiedad.imagen}
