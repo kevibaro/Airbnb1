@@ -73,14 +73,14 @@ function Autenticacion() {
     // Si hay sesión → Mostrar perfil y botón de cerrar sesión
     return (
         <>
-            <div className="flex items-center justify-between gap-3 p-4 rounded-xl shadow-md border border-gray-200 bg-white w-80">
+            <div className="flex items-center justify-between gap-3 p-4 rounded-xl shadow-md border border-gray-200 bg-white ">
                 <Link
                     to="/"
                     className="text-2xl font-bold text-rose-500 hover:text-rose-600 transition"
                 >
                     Airbnb
                 </Link>
-                <div className="flex flex-col w-52 items-center gap-4">
+                <div className="flex flex-col w-80 items-center gap-4">
                     <img
                         className="w-20 h-20 rounded-full object-cover"
                         src={session.user.user_metadata?.avatar_url}
