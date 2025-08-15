@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
-import Header from "../header";
+import Header from "../Header";
 import CalendarioReserva from "./CalendarioReserva";
 import Reserva from "./Reserva";
 
