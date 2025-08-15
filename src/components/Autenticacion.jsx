@@ -73,7 +73,7 @@ function Autenticacion() {
     // Si hay sesión → Mostrar perfil y botón de cerrar sesión
     return (
         <>
-            <div className="flex items-center justify-between gap-3 p-4 rounded-xl shadow-md border border-gray-200 bg-white w-2xs">
+            <div className="flex items-center justify-between gap-3 p-4 rounded-xl shadow-md border border-gray-200 bg-white w-80">
                 <Link
                     to="/"
                     className="text-2xl font-bold text-rose-500 hover:text-rose-600 transition"
