@@ -28,7 +28,7 @@ function Reserva({ fechaEntrada, fechaSalida, noches, total }) {
       alert("✅ Reserva guardada exitosamente");
     } catch (err) {
       console.error("Error al guardar reserva:", err.message);
-      alert("❌ Error al guardar la reserva, por favor inicie sesión");
+      alert("❌ Error al guardar la reserva, por favor inicie sesión con Google");
     }
   };
 
