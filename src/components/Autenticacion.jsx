@@ -83,7 +83,7 @@ function Autenticacion() {
                 <div className="flex flex-col w-80 items-center gap-4">
                     <div className='flex items-center'>
                     <img
-                        className="w-20 h-20 rounded-full object-cover"
+                        className="flex items-center w-20 h-20 rounded-full object-cover"
                         src={session.user.user_metadata?.avatar_url}
                         alt="Foto de perfil"
                     />
