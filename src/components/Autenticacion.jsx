@@ -80,7 +80,7 @@ function Autenticacion() {
         >
           Airbnb
         </Link>
-        <div className="flex flex-col w-36 items-center gap-4">
+        <div className="flex flex-col w-52 items-center gap-4">
           <img
             className="w-44 h-44 rounded-full object-cover"
             src={session.user.user_metadata?.avatar_url}
