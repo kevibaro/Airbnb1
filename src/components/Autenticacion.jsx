@@ -29,7 +29,7 @@ function Autenticacion() {
     else {
         return (
             <>
-                <div className="flex gap-10 p-4 w- rounded-xl shadow-md border border-gray-200 bg-white text-center">
+                <div className="flex justify-self-end gap-10 p-4 w- rounded-xl shadow-md border border-gray-200 bg-white text-center">
                     <Link
                         to="/"
                         className="text-2xl font-bold text-rose-500 hover:text-rose-600 transition"
