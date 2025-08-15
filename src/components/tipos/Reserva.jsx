@@ -1,6 +1,7 @@
 // src/components/Reserva.jsx
 import React from 'react';
 import { supabase } from '../../supabaseClient'; // Asegúrate que la ruta sea correcta
+import { Navigate } from 'react-router-dom';
 
 function Reserva({ fechaEntrada, fechaSalida, noches, total }) {
 
@@ -26,6 +27,8 @@ function Reserva({ fechaEntrada, fechaSalida, noches, total }) {
 
       if (error) throw error;
       alert("✅ Reserva guardada exitosamente");
+      Navigate('/');
+      
     } catch (err) {
       console.error("Error al guardar reserva:", err.message);
       alert("❌ Error al guardar la reserva, por favor inicie sesión con Google ❌");
