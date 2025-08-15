@@ -76,7 +76,7 @@ function Autenticacion() {
       <div className="flex items-center justify-between gap-6 p-4 rounded-xl shadow-md border border-gray-200 bg-white">
         <Link
           to="/"
-          className="text-2xl font-bold text-rose-500 hover:text-rose-600 transition"
+          className="text-5xl font-bold text-rose-500 hover:text-rose-600 transition"
         >
           Airbnb
         </Link>
