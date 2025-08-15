@@ -1,7 +1,7 @@
 
 
-import Header from '../components/header'
-import Scrol from '../components/scrol'
+import Header from '../components/Header'
+import Scrol from '../components/Scrol'
 import Supabase from '../components/Supabase'
 
 
