@@ -3,6 +3,7 @@ import { supabase } from '../../supabaseClient';
 import { Link, useNavigate } from 'react-router-dom';
 import Scrol from '../Scrol';
 import Header from '../Header';
+import Autenticacion from '../Autenticacion';
 
 function Cabañas() {
   const [cabañas, setCabañas] = useState([]);
@@ -33,6 +34,7 @@ function Cabañas() {
 
   return (
     <>
+      <Autenticacion/>
       <Header />
       <Scrol />
       <div className="flex justify-center flex-wrap gap-6 p-6">

@@ -4,6 +4,7 @@ import { supabase } from "../../supabaseClient";
 import Header from "../Header";
 import CalendarioReserva from "./CalendarioReserva";
 import Reserva from "./Reserva";
+import Autenticacion from "../Autenticacion";
 
 
 
@@ -32,6 +33,7 @@ function Description() {
   }
   return (
     <>
+    <Autenticacion/>
       <Header />
       <div className="max-w-3xl mx-auto mt-10 p-6 border rounded-xl shadow-lg">
         <img
