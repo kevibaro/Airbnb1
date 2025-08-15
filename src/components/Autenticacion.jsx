@@ -30,7 +30,12 @@ function Autenticacion() {
         return (
             <>
                 <div className="flex gap-10 p-4 w- rounded-xl shadow-md border border-gray-200 bg-white text-center">
-                    <Link to="/"><button className="text-2xl font-bold text-rose-500 hover:text-rose-600 transition">Airbnb</button></Link>
+                    <Link
+                        to="/"
+                        className="text-2xl font-bold text-rose-500 hover:text-rose-600 transition"
+                    >
+                        Airbnb
+                    </Link>
                     <img className='w-12 h-12 rounded-full object-cover' src={session.user.user_metadata?.avatar_url} alt="" />
                 </div>
                 <div className=''>
