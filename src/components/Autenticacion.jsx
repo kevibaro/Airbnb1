@@ -38,9 +38,11 @@ function Autenticacion() {
                     </Link>
                     <img className='w-12 h-12 rounded-full object-cover' src={session.user.user_metadata?.avatar_url} alt="" />
                 </div>
+                <div className='flex justify-self-end'>
                 <div className=''>
                     <h2>{session?.user?.email}</h2>
                     <button onClick={signOut}>Cerrar sesion</button>
+                </div>
                 </div>
             </>
         )
