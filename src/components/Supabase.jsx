@@ -48,7 +48,7 @@ function Supabase() {
         <div className="flex px-3 border-r w-full">
           <input
             type="text"
-            placeholder="Cualquier lugar"
+            placeholder=""
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
             className="outline-none w-full"
