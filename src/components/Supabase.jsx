@@ -40,7 +40,7 @@ function Supabase() {
   return (
     <>
       {/* 🔍 Buscador */}
-      <div className="mt-44 md:relative bottom-36 left-56 flex items-center justify-between w-full max-w-md md:max-w-xl rounded-full shadow-md border px-4 py-2 bg-white hover:shadow-lg transition-all cursor-pointer mx-auto mb-6">
+      <div className="mt-10 md:relative bottom-36 left-56 flex items-center justify-between w-full max-w-md md:max-w-xl rounded-full shadow-md border px-4 py-2 bg-white hover:shadow-lg transition-all cursor-pointer mx-auto mb-6">
         <div className="flex items-center  md:hidden w-30">
           <span className="text-sm font-semibold w-full">¿A dónde vas?</span>
         </div>
