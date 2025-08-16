@@ -40,20 +40,20 @@ function Supabase() {
   return (
     <>
       {/* 🔍 Buscador */}
-      <div className=" md:relative bottom-36 left-56 flex items-center justify-between w-full max-w-md md:max-w-xl rounded-full shadow-md border px-4 py-2 bg-white hover:shadow-lg transition-all cursor-pointer mx-auto mb-6">
+      <div className=" md:flex items-center justify-between w-full max-w-md md:max-w-xl rounded-full shadow-md border px-4 py-2 bg-white hover:shadow-lg transition-all cursor-pointer  mx-auto ">
         <div className="flex items-center  md:hidden w-30">
-          <span className="md:text-sm font-semibold w-96">¿A dónde vas?</span>
+          <span className="md:text-sm font-semibold w-96"></span>
         </div>
 
-        <div className="flex px-3 border-r w-full">
+        <div className="flex  border-r w-full">
           <input
             type="text"
-            placeholder=""
+            placeholder="¿A dónde vas?"
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
-            className="outline-none w-full"
+            className="w-full"
           />
-          <div className="relative right-9 flex">
+          <div className="relative  flex">
             <div className="bg-rose-500 p-2 rounded-full text-white ml-2 hover:bg-rose-600">
               <Search size={16} />
             </div>

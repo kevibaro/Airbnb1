@@ -3,9 +3,6 @@ import './App.css'
 import Formulario from './pages/Formulario'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Cabañas from './components/tipos/Cabañas'
-import Casas from './components/tipos/Casas'
-import Playa from './components/tipos/Playa'
 import Description from './components/tipos/Description'
 import Reserva from './components/tipos/Reserva'
 
@@ -21,9 +18,6 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path="/:id" element={<Description />} />
         <Route path='/Formulario' element={<Formulario />} />
-        <Route path='/Cabañas' element={<Cabañas />} />
-        <Route path='/Casas' element={<Casas />} />
-        <Route path='/Playa' element={<Playa />} />
         <Route path='/Reserva' element={<Reserva />} />
       </Routes>
     </>
