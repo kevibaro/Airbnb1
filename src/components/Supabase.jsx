@@ -42,7 +42,7 @@ function Supabase() {
       {/* 🔍 Buscador */}
       <div className="md:relative bottom-36 left-56 flex items-center justify-between w-full max-w-md md:max-w-xl rounded-full shadow-md border px-4 py-2 bg-white hover:shadow-lg transition-all cursor-pointer mx-auto mb-6">
         <div className="flex items-center md:hidden w-30">
-          <span className="text-sm font-semibold">¿A dónde vas?</span>
+          <span className="text-sm font-semibold w-3">¿A dónde vas?</span>
         </div>
 
         <div className="flex px-3 border-r w-full">
