@@ -18,7 +18,7 @@ function MisReservas() {
           .from("reserva")
           .select("*")
           .eq("usuario", user.email)
-          .order("fechaEntrada", { ascending: true });
+          .order("fechaEntrada", { ascending: false });
 
         if (error) throw error;
         setReservas(data);
