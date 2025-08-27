@@ -20,6 +20,9 @@ function MenuDesplegable() {
           <Link to="/Formulario"> <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 transition cursor-pointer">
             Publicar
           </button></Link>
+          <Link to="/MisReservas"> <button className="block w-full px-4 py-2 text-left hover:bg-gray-100 transition cursor-pointer">
+            Mis reservas
+          </button></Link>
          
         </div>
       )}
