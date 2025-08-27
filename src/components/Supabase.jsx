@@ -90,6 +90,9 @@ function Supabase() {
                   <p className="flex items-center gap-2 text-sm text-gray-500">
                     {p.tipo}
                   </p>
+                  <p className="flex items-center gap-2 text-sm text-gray-500">
+                    {p.fecha_actual}
+                  </p>
                   <button
                     className="mt-3 w-full py-2 text-sm font-semibold bg-rose-500 cursor-pointer text-white rounded-xl hover:bg-rose-600 transition"
                     onClick={(e) => {
