@@ -1,6 +1,7 @@
 // src/components/MisReservas.jsx
 import React, { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
+import Header from "../Header";
 
 function MisReservas() {
   const [reservas, setReservas] = useState([]);
@@ -38,9 +39,10 @@ function MisReservas() {
   }
 
   return (
-    <div className="p-6">
+      <div className="p-6">
       <h2 className="text-2xl font-bold mb-4">📝 Mis Reservas</h2>
       <div className="space-y-4">
+        <Header/>
         {reservas.map((reserva) => (
           <div
             key={reserva.id}
