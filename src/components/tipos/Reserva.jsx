@@ -41,6 +41,11 @@ function Reserva({ fechaEntrada, fechaSalida, noches, total }) {
     navigate('/');
   };
 
+  const irAMisReservas = () => {
+    setShowModal(false);
+    navigate('/mis-reservas');
+  };
+
   return (
     <>
       <div className="mt-6 p-4 border rounded-xl bg-gray-50">
@@ -66,11 +71,21 @@ function Reserva({ fechaEntrada, fechaSalida, noches, total }) {
             <p className="mb-2">📅 Salida: {fechaSalida.toLocaleDateString()}</p>
             <p className="mb-2">🛏️ Noches: {noches}</p>
             <p className="mb-4">💵 Total: ${total.toLocaleString('es-CO')}</p>
+
+            {/* Botón volver al inicio */}
             <button
               onClick={cerrarModal}
-              className="bg-rose-500 text-white px-4 py-2 rounded-lg hover:bg-rose-600"
+              className="bg-rose-500 text-white px-4 py-2 rounded-lg hover:bg-rose-600 mr-2"
             >
               Cerrar y Volver al Inicio
+            </button>
+
+            {/* Botón ir a Mis Reservas */}
+            <button
+              onClick={irAMisReservas}
+              className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+            >
+              Ver Mis Reservas
             </button>
           </div>
         </div>
