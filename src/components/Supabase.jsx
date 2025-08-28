@@ -32,7 +32,6 @@ function Supabase() {
     navigate(`/${id}`);
   };
 
-  // Filtramos por localidad (location)
   const resultadosFiltrados = airbnb.filter((p) =>
     p.location?.toLowerCase().includes(busqueda.toLowerCase())
   );
@@ -40,75 +39,67 @@ function Supabase() {
   return (
     <>
       {/* 🔍 Buscador */}
-      <div className=" md:flex items-center justify-between w-full max-w-md md:max-w-xl rounded-full shadow-md border px-4 py-2 bg-white hover:shadow-lg transition-all cursor-pointer  mx-auto ">
-        <div className="flex items-center  md:hidden w-30">
-          <span className="md:text-sm font-semibold w-96"></span>
-        </div>
-
-        <div className="flex  border-r w-full">
+      <div className="flex items-center justify-between w-full max-w-lg md:max-w-2xl rounded-full shadow-md border px-3 py-2 bg-white hover:shadow-lg transition-all mx-auto mt-4">
+        {/* Input de búsqueda */}
+        <div className="flex items-center w-full gap-2">
           <input
             type="text"
             placeholder="¿A dónde vas?"
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
-            className="w-full"
+            className="w-full px-2 py-1 text-sm md:text-base outline-none"
           />
-          <div className="relative  flex">
-            <div className="bg-rose-500 p-2 rounded-full text-white ml-2 hover:bg-rose-600">
-              <Search size={16} />
-            </div>
-            <MenuDesplegable />
-            <UserDesplegable />
-          </div>
+          <button className="bg-rose-500 p-2 rounded-full text-white hover:bg-rose-600 transition">
+            <Search size={16} />
+          </button>
+        </div>
+
+        {/* Menú y usuario (ocultos en móvil) */}
+        <div className="hidden md:flex items-center gap-2 ml-4">
+          <MenuDesplegable />
+          <UserDesplegable />
         </div>
       </div>
 
       {/* 📋 Lista filtrada */}
-      <div className="flex justify-center flex-wrap gap-6 p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 p-6">
         {resultadosFiltrados.length > 0 ? (
           resultadosFiltrados.map((p) => (
             <div
               onClick={() => handleVerDetalles(p.id)}
               key={p.id}
-              className="w-72 border rounded-2xl overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer"
+              className="w-full border rounded-2xl overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer"
             >
-              <div className="card-body text-left">
-                <img
-                  src={p.imagen}
-                  alt=""
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-gray-900 truncate">
-                    {p.titulo}
-                  </h3>
-                  <p className="text-sm text-gray-500">{p.location}</p>
-                  <p className="text-base font-medium text-gray-900 mt-1">
-                    ${p.price} / noche
-                  </p>
-                  <p className="text-sm text-gray-500">🛏️ {p.bedrooms} </p>
-                  <p className="flex items-center gap-2 text-sm text-gray-500">
-                    {p.tipo}
-                  </p>
-                  <p className="flex items-center gap-2 text-sm text-gray-500">
-                    {p.fecha_actual}
-                  </p>
-                  <button
-                    className="mt-3 w-full py-2 text-sm font-semibold bg-rose-500 cursor-pointer text-white rounded-xl hover:bg-rose-600 transition"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleVerDetalles(p.id);
-                    }}
-                  >
-                    Reservar
-                  </button>
-                </div>
+              <img
+                src={p.imagen}
+                alt=""
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-900 truncate">
+                  {p.titulo}
+                </h3>
+                <p className="text-sm text-gray-500">{p.location}</p>
+                <p className="text-base font-medium text-gray-900 mt-1">
+                  ${p.price} / noche
+                </p>
+                <p className="text-sm text-gray-500">🛏️ {p.bedrooms} </p>
+                <p className="text-sm text-gray-500">{p.tipo}</p>
+                <p className="text-sm text-gray-500">{p.fecha_actual}</p>
+                <button
+                  className="mt-3 w-full py-2 text-sm font-semibold bg-rose-500 text-white rounded-xl hover:bg-rose-600 transition"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleVerDetalles(p.id);
+                  }}
+                >
+                  Reservar
+                </button>
               </div>
             </div>
-
           ))
         ) : (
-          <p className="text-gray-500 text-center w-full">
+          <p className="text-gray-500 text-center w-full col-span-full">
             No se encontraron resultados
           </p>
         )}
