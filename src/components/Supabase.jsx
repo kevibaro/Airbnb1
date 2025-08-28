@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
 import { useNavigate } from "react-router-dom";
-import { Search } from "lucide-react";
+import { Search, Menu } from "lucide-react";
 import MenuDesplegable from "./MenuDesplegable";
 import UserDesplegable from "./UserDesplegable";
 
 function Supabase() {
   const [airbnb, setAirbnb] = useState([]);
   const [busqueda, setBusqueda] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false); // 👈 estado para menú móvil
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,7 +40,7 @@ function Supabase() {
   return (
     <>
       {/* 🔍 Buscador */}
-      <div className="flex items-center justify-between w-full max-w-lg md:max-w-2xl rounded-full shadow-md border px-3 py-2 bg-white hover:shadow-lg transition-all mx-auto mt-4">
+      <div className="flex items-center justify-between w-full max-w-lg md:max-w-2xl rounded-full shadow-md border px-3 py-2 bg-white hover:shadow-lg transition-all mx-auto mt-4 relative">
         {/* Input de búsqueda */}
         <div className="flex items-center w-full gap-2">
           <input
@@ -54,10 +55,27 @@ function Supabase() {
           </button>
         </div>
 
-        {/* Menú y usuario (ocultos en móvil) */}
+        {/* Menú en PC */}
         <div className="hidden md:flex items-center gap-2 ml-4">
           <MenuDesplegable />
           <UserDesplegable />
+        </div>
+
+        {/* Menú en Móvil */}
+        <div className="md:hidden ml-2">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="p-2 rounded-md hover:bg-gray-100"
+          >
+            <Menu size={22} />
+          </button>
+
+          {menuOpen && (
+            <div className="absolute top-14 right-2 bg-white border shadow-md rounded-xl p-4 flex flex-col gap-3 w-40 z-50">
+              <MenuDesplegable />
+              <UserDesplegable />
+            </div>
+          )}
         </div>
       </div>
 
